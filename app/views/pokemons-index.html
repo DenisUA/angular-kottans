@@ -1,5 +1,9 @@
 <h1>Pokemons</h1>
 
-<span ng-repeat="pokemon in pokemons">
+<span ng-repeat="pokemon in pokemons | limitTo: paginationLimit()">
   <show-pokemon pokemon="pokemon"></show-pokemon>
 </span>
+
+<button ng-show="hasMoreItemsToShow()" ng-click="showMoreItems()">
+  Show more
+</button>
