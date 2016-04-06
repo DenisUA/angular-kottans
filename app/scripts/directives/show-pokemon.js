@@ -4,10 +4,12 @@ angular.module('angularKottansApp')
         restrict: "E",
         templateUrl: 'views/directives/show-pokemon.html',
         scope: {
-          pokemonaza: '='
+          pokemon: '='
         },
-        link: function (scope, element, attrs) {
-
+        link: function (scope, element) {
+          scope.rotateCard = function() {
+            $(element).find('.card-container').toggleClass('hover');
+          }
         }
       };
     }
