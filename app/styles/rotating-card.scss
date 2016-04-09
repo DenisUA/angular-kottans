@@ -27,7 +27,7 @@ body {
 }
 
 
-.card-container.static:hover .card, 
+.card-container.static:hover .card,
 .card-container.static.hover .card {
 	-webkit-transform: none;
 -moz-transform: none;
@@ -83,9 +83,12 @@ body {
 
 
 .card{
-    background: none repeat scroll 0 0 #FFFFFF;
-    border-radius: 4px;
-    color: #444444;
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-radius: 4px;
+  color: #444444;
+  &.hidden {
+    height: 420px;
+  }
 }
 .card-container, .front, .back {
 	width: 100%;
@@ -225,7 +228,7 @@ body {
 }
 .com{
     color: #999;
-} 
+}
 
 .btn-simple{
     opacity: .8;
@@ -272,10 +275,10 @@ body {
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     .front, .back{
-        -ms-backface-visibility: visible;    
+        -ms-backface-visibility: visible;
         backface-visibility: visible;
     }
-    
+
     .back {
         visibility: hidden;
         -ms-transition: all 0.2s cubic-bezier(.92,.01,.83,.67);

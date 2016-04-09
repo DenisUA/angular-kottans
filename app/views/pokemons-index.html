@@ -1,5 +1,13 @@
 <h1>Pokemons</h1>
-
-<span ng-repeat="pokemon in pokemons">
+<div>
+  <pokemons-select pokemons="pokemons" selected-type="selectedType"></pokemons-select>
+</div>
+<div ng-if="loading">Loading...</div>
+<span ng-repeat="pokemon in pokemons " ng-show="([pokemon] | pokemonTypes:selectedType).length > 0">
   <show-pokemon pokemon="pokemon"></show-pokemon>
 </span>
+
+
+<button ng-show="nextLink" ng-click="loadMore()">
+  Show more
+</button>
