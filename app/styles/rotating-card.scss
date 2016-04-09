@@ -86,8 +86,9 @@ body {
   background: none repeat scroll 0 0 #FFFFFF;
   border-radius: 4px;
   color: #444444;
-  height: 420px;
-
+  &.hidden {
+    height: 420px;
+  }
 }
 .card-container, .front, .back {
 	width: 100%;

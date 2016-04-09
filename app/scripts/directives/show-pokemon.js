@@ -11,15 +11,13 @@ angular.module('angularKottansApp')
             method: 'GET',
             url: scope.pokemon.url
           }).then(function (response) {
-            scope.pokemonData = response.data
-
+            angular.extend(scope.pokemon, response.data);
           }, function (response) {
 
           }).finally(function () {
             $(element).find('.loading-card').hide();
             $(element).find('.loaded-card').removeClass('hidden');
           });
-
 
           scope.rotateCard = function() {
             $(element).find('.card-container').toggleClass('hover');

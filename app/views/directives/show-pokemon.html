@@ -1,19 +1,22 @@
 <div class="col-md-3 col-sm-3">
   <div class="card-container manual-flip">
     <div class="card" ng-click="rotateCard()">
-      <div class="front loading-card"> Loading...</div>
+      <div class="front loading-card">Loading...</div>
       <div class="front loaded-card hidden">
         <div class="cover">
           <img src="http://www.itgeared.com/images/content/1481-1.jpg">
         </div>
         <div class="user">
-          <img class="img-circle" ng-src="http://pokeapi.co/media/img/{{pokemonData.id}}.png">
+          <img class="img-circle" ng-src="http://pokeapi.co/media/img/{{pokemon.id}}.png">
         </div>
         <div class="content">
           <div class="main">
-            <h3 class="name">{{pokemonData.name}}</h3>
+            <h3 class="name">{{pokemon.name}}</h3>
             <p class="profession"></p>
-            <h5 ng-repeat="type in pokemonData.types"><i class="fa fa-map-marker fa-fw text-muted"></i> {{type.type.name}}</h5>
+            <h5 ng-repeat="type in pokemon.types">
+              <i class="fa fa-map-marker fa-fw text-muted"></i>
+              {{type.type.name}}
+            </h5>
           </div>
           <div class="footer">
             <button class="btn btn-simple">
