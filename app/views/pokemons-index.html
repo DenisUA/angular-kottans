@@ -1,13 +1,24 @@
-<h1>Pokemons</h1>
-<div>
+<div class="poke-header text-center">
+  <img class="poke-logo" ng-src="images/poke-ball.png">
+  <h1>Pokemons</h1>
+</div>
+
+<div ng-if="!loading">
   <pokemons-select pokemons="pokemons" selected-type="selectedType"></pokemons-select>
 </div>
-<div ng-if="loading">Loading...</div>
+<hr>
+
 <span ng-repeat="pokemon in pokemons " ng-show="([pokemon] | pokemonTypes:selectedType).length > 0">
   <show-pokemon pokemon="pokemon"></show-pokemon>
 </span>
 
+<div class="poke-spinner" ng-if="loading">
+  <i class="fa fa-spinner fa-pulse fa-5x" ></i>
+</div>
 
-<button ng-show="nextLink" ng-click="loadMore()">
-  Show more
-</button>
+<hr>
+<div class="text-center show-more">
+  <button ng-show="nextLink" ng-click="loadMore()" class="btn btn-primary btn-lg">
+    Show more
+  </button>
+</div>
