@@ -7,6 +7,7 @@ This project made by Denis Yakovenko.
 git clone https://github.com/DenisUA/angular-kottans.git
 cd $_
 npm install -g grunt-cli bower
+bower install
 gem install compass
 ```
 
