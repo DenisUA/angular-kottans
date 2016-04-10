@@ -8,14 +8,13 @@
 </div>
 <hr>
 
-<div class="poke-spinner" ng-if="loading">
-  <i class="fa fa-spinner fa-pulse fa-5x" ></i>
-</div>
-
-
 <span ng-repeat="pokemon in pokemons " ng-show="([pokemon] | pokemonTypes:selectedType).length > 0">
   <show-pokemon pokemon="pokemon"></show-pokemon>
 </span>
+
+<div class="poke-spinner" ng-if="loading">
+  <i class="fa fa-spinner fa-pulse fa-5x" ></i>
+</div>
 
 <hr>
 <div class="text-center show-more">
