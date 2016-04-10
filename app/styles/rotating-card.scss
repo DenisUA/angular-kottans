@@ -9,7 +9,6 @@ body {
 .btn:active{
     outline: 0 !important;
 }
-/* entire container, keeps perspective */
 .card-container {
 	  -webkit-perspective: 800px;
    -moz-perspective: 800px;
@@ -17,7 +16,6 @@ body {
         perspective: 800px;
         margin-bottom: 30px;
 }
-/* flip the pane when hovered */
 .card-container:not(.manual-flip):hover .card,
 .card-container.hover.manual-flip .card{
 	-webkit-transform: rotateY( 180deg );
@@ -34,7 +32,6 @@ body {
  -o-transform: none;
     transform: none;
 }
-/* flip speed goes here */
 .card {
 	 -webkit-transition: -webkit-transform .5s;
    -moz-transition: -moz-transform .5s;
@@ -47,7 +44,6 @@ body {
 	position: relative;
 }
 
-/* hide back of pane during swap */
 .front, .back {
 	-webkit-backface-visibility: hidden;
    -moz-backface-visibility: hidden;
@@ -60,24 +56,16 @@ body {
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.14);
 }
 
-/* front pane, placed above back */
 .front {
 	z-index: 2;
 }
 
-/* back, initially hidden pane */
 .back {
 		-webkit-transform: rotateY( 180deg );
    -moz-transform: rotateY( 180deg );
      -o-transform: rotateY( 180deg );
         transform: rotateY( 180deg );
         z-index: 3;
-}
-
-.back .btn-simple{
-    position: absolute;
-    left: 0;
-    bottom: 4px;
 }
 /*        Style       */
 
@@ -123,7 +111,7 @@ body {
     padding: 10px 20px 20px;
 }
 .card .content .main {
-    min-height: 160px;
+    min-height: 110px;
 }
 .card .back .content .main {
     height: 215px;
@@ -152,18 +140,11 @@ body {
     padding: 10px 0 0;
     text-align: center;
 }
-.card .footer .social-links{
-    font-size: 18px;
-}
-.card .footer .social-links a{
-    margin: 0 7px;
-}
 .card .footer .btn-simple{
     margin-top: -6px;
 }
 .card .header {
     padding: 15px 20px;
-    height: 90px;
 }
 .card .motto{
     border-bottom: 1px solid #EEEEEE;
@@ -291,4 +272,24 @@ body {
         z-index: 5;
         visibility: visible;
     }
+}
+
+.table-borderless tbody tr td, .table-borderless tbody tr th, .table-borderless thead tr th {
+  border: none;
+}
+
+.content {
+  .table > thead > tr > th,
+  .table > thead > tr > td,
+  .table > tbody > tr > th,
+  .table > tbody > tr > td,
+  .table > tfoot > tr > th,
+  .table > tfoot > tr > td {
+    padding: 3px;
+  }
+
+  .table {
+    margin-bottom: 0;
+    height: 260px;
+  }
 }
